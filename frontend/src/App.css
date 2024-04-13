@@ -41,18 +41,30 @@
   color: #888;
 }
 
-
 .navbar {
   display: flex; /* Allow elements to sit side-by-side */
-  width: 75vw; /* Set width to 75% of viewport width */
+  width: 74vw; /* Set width to 75% of viewport width */
   height: 70px; /* Set height to 100% of viewport height */
   position: fixed; /* Fix the navbar to the top */
   top: 0; /* Position at the top of the viewport */
   right: 0; /* Position at the right edge of the viewport */
   background-color: #f1f1f1; /* Set background color */
+  border-bottom: 1px solid #000;
+}
+
+.left-side {
+  position: fixed; /* Fix the left sidebar */
+  top: 0; 
+  left: 0; /* Position left sidebar at the leftmost side */
+  background-color: rgb(1, 1, 34); 
+  height: 100vh; 
+  width: 25vw; 
+  
 }
 
 .nav-content {
+  display: flex;
+  flex-direction: row;
   padding: 20px 20px;
 }
 
@@ -68,4 +80,267 @@
   background-color: #ddd;
 }
 
+.highlight-line {
+  /* border: 0; Remove default border styles */
+  border-top: 5px solid #000; /* Set a thin top border for highlight */
+  margin: 10px 0; /* Add some margin above and below the line */
+}
 
+.status-section {
+  /* width: 75vw; */
+  text-align: center; /*Center the text and boxes horizontally*/
+  padding: 80px 20px;
+}
+
+.status-boxes {
+  display: flex; /* Arrange boxes side-by-side */
+  /* justify-content: space-between; Distribute boxes evenly */
+  /* margin-top: 0px; Add some margin above the boxes */
+  
+  /* width: 75vw; */
+  /* margin-left: 10px; */
+}
+
+.status-box {
+  border: 1px solid #ddd; /* Add a border to each box */
+  /* padding: 10px; */
+  text-align: center; /* Center content within each box */
+  /* padding: 10px 10px; */
+  margin-left: 10px;
+  border-radius: 15px;
+  width: 200px;
+  height: 200px;
+  
+}
+
+.one{
+  background-color: #9795c3;
+  /* margin-left: 80px; */
+}
+
+.two{
+  background-color: #c6d9bc;
+}
+
+.three{
+  background-color: #FAEF9B;
+}
+
+.status-box h3 {
+  margin-bottom: 10px; /* Add some margin below the heading */
+  /* text-align: center; */
+}
+
+.dropdown-content {
+  display: none; /* Initially hide dropdown content */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Remove hover behavior (replaced with state-based visibility) */
+  cursor: pointer;
+}
+
+.dropdown-content li {
+  list-style-type: square; /* Remove default bullet points */
+  padding: 5px 10px; /* Adjust padding for spacing */
+}
+
+.container{
+  justify-content: center;
+  /* align-items: top; */
+  /* margin-top: 40px; */
+  background-color: #FEC7B4;
+  width: 100px;
+  align-items: center;
+  margin-left: 500px;
+  /* border-radius: 25%; */
+}
+
+.statistics-section{
+  display: flex;
+}
+
+.dropdown-button{
+  margin-top: 15px;
+  margin-left: 500px;
+}
+
+.circle-container {
+  width: 400px; /* Adjust container width as needed */
+  height: 400px; /* Adjust container height as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  position: relative; /* Enable relative positioning for circles */
+}
+
+.big-circle {
+  width: 200px; /* Width of the big circle */
+  height: 200px; /* Height of the big circle */
+  border-radius: 50%; /* Make it a perfect circle */
+  background-color: #f1f1f1; /* Set background color */
+  position: absolute; /* Position absolutely within container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the circle */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+.small-circle {
+  width: 70px; /* Width of the small circles */
+  height: 70px; /* Height of the small circles */
+  border-radius: 50%; /* Make them perfect circles */
+  background-color: #DFF5FF; /* Set background color */
+  position: absolute; /* Position absolutely within container */
+}
+
+.top-left {
+  /* top: 0px; Position top-left circle */
+  /* left: 0px; Position top-left circle */
+  /* margin-top: 10px;
+  margin-left: 5px; */
+  top: 125px;
+  /* left: 15px */
+}
+
+.top-right {
+  top: 125px; /* Position top-right circle */
+  right: 3px; /*Position top-right circle*/
+}
+
+.bottom-left {
+  bottom: 125px; /* Position bottom-left circle */
+  /* left: 50px; Position bottom-left circle */
+}
+
+.bottom-right {
+  bottom: 125px; /* Position bottom-right circle */
+  /* right: 50px; Position bottom-right circle */
+  right: 3px;
+}
+
+/* .left-container{
+  top: 125px;
+  width: 20px;
+  background-color: #FAEF9B;
+  border-radius: 20%;
+} */
+
+table {
+  border-collapse: collapse; /* Remove table borders */
+  width: 100%; /* Stretch table to full width */
+}
+
+th, td {
+  text-align: center; /* Center content in cells */
+  padding: 10px; /* Add some padding for spacing */
+}
+
+th {
+  background-color: #f1f1f1; /* Light gray background for headers */
+}
+
+.subject {
+  width: 100%; /* Make subject boxes fill the cell */
+  height: 50px; /* Adjust height as needed */
+  background-color: #ccc; /* Default background color for subjects */
+  cursor: pointer; /* Indicate interactivity on hover */
+}
+
+.math { background-color: lightblue; } /* Color for math subject */
+.science { background-color: lightgreen; } /* Color for science subject */
+.english { background-color: lightyellow; } /* Color for english subject */
+.history { background-color: lightcoral; } /* Color for history subject */
+.art { background-color: lightpink; } /* Color for art subject */
+
+#tooltip {
+  position: absolute; /* Absolute positioning for tooltip */
+  background-color: #f1f1f1; /* Light gray background */
+  border: 1px solid #ddd; /* Border for the tooltip */
+  padding: 5px; /* Add padding for content */
+  display: none; /* Initially hide the tooltip */
+}
+
+#tooltip-text {
+  font-size: 12px; /* Adjust font size for tooltip text */
+}
+.main {
+  width: 25vw; /* Set width to 100% of viewport width */
+  height: 100vh; /* Set height to 100% of viewport height */
+}
+
+.profile{
+  height: 100px;
+  width: 120px;
+  border-radius:50px;
+  background-color: azure;
+  margin-left: 150px;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* .bottom-left{
+  width: 25vw;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0px;
+  
+}
+
+.up{
+  background-color: aliceblue;
+  width: auto;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.box{
+  height: 80px;
+  width: 80px;
+  background-color: beige;
+  padding-left: 10px;
+  
+} */
+
+
+.bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  margin-top: 200px;
+}
+
+.up {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.down {
+  display: flex;
+  width: 100%;
+}
+
+
+
+.box {
+  height: 140px;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.208); /* Use rgba for transparency */
+  border-radius: 8px;
+  padding: 5px;
+  margin-left: 40px;
+  margin-right: 40px;
+  backdrop-filter: blur(8px); /* Apply blur effect to background */
+  box-shadow: 0 8px 32px 0 rgba(34, 41, 134, 0.37); /* Add box shadow for depth */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alignment{
+  align-items: center;
+  margin-right: 10px;
+}

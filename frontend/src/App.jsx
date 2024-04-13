@@ -1,19 +1,26 @@
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import './App.css'
+import Home from "./pages/Home/Home.jsx";
+import Login from './pages/login/Login.jsx';
+import Signup from './pages/signup/Signup.jsx';
+// import Home from './pages/home/home.jsx';
 
 function App() {
   return (
     <>
-          <div className="navbar">  {/* Add class for CSS styling */}
-        <div className="nav-content">
-          <a className="nav-link" href="#">Dashboard</a>
-          <a className="nav-link" href="#">Learn</a>
-          {/* <a className="nav-link" href="#">Statistics</a>
-          <a className="nav-link" href="#">Courses</a>
-          <a className="nav-link" href="#">Settings</a> */}
-        </div>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </Router>
+        
+      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
+
