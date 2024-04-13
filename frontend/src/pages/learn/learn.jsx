@@ -4,6 +4,8 @@ import Navbar from '../Navbar/Navbar';
 import Sidebar from '../Sidebar/Sidebar';
 import Image from '../../images/science.jpg';
 import Dropdown from '../../components/dropdown/dropdown';
+import testIcon from '../../images/test.png'
+import pdfIcon from '../../images/pdf.png'
 
 const Learn = () => {
   const [dropdownData, setDropdownData] = useState([]); // State to store dropdown data
@@ -21,6 +23,13 @@ const Learn = () => {
     generateRandomData(); // Generate random data on component mount
   }, []); // Empty dependency array ensures generateRandomData runs only once
 
+  const [isOpen, setIsOpen] = useState(false); // State to control dropdown visibility
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+
   return (
     <>
       <div className="top">
@@ -33,13 +42,14 @@ const Learn = () => {
           <div className="container">
             {dropdownData.map((item, index) => (
               <div key={index} className="dropdown-container">
-                <Dropdown content={item.label} icon="fas fa-file-pdf" className="sizing"/>
-                
+                <Dropdown content={item.label} icon={<img src={testIcon} alt="Test Icon" />}/>
+                <img src={pdfIcon} className='align'/>
               </div>
             ))}
           </div>
         </div>
       </div>
+      
     </>
   );
 };
