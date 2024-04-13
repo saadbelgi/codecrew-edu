@@ -1,0 +1,16 @@
+.dropdown-container {
+    /* margin-top: 10px; */
+    width: 600px;
+    background-color: #EBC49F;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for content */
+    margin: 10px 0; /* Spacing between dropdowns */
+    display: flex; /* Arrange content horizontally */
+    align-items: center; /* Align icon and text vertically */
+    box-shadow: 0 2px 4px #f97f0d(0, 0, 0, 0.1); /* Optional subtle shadow */
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    flex-grow: 1; /* Allow content to fill remaining space */
+  }

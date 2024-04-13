@@ -4,6 +4,7 @@ import './App.css'
 import Home from "./pages/Home/Home.jsx";
 import Login from './pages/login/Login.jsx';
 import Signup from './pages/signup/Signup.jsx';
+import Learn from './pages/learn/learn.jsx';
 // import Home from './pages/home/home.jsx';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/learn" element={<Learn />} />
         </Routes>
       </Router>
         

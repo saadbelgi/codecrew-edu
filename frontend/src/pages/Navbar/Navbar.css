@@ -1,0 +1,35 @@
+.navbar {
+    display: flex; /* Allow elements to sit side-by-side */
+    width: 74vw; /* Set width to 75% of viewport width */
+    height: 70px; /* Set height to 100% of viewport height */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Position at the top of the viewport */
+    right: 0; /* Position at the right edge of the viewport */
+    background-color: #f1f1f1; /* Set background color */
+    border-bottom: 1px solid #000;
+  }
+  
+  .nav-content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    align-items: center;
+  }
+  
+  .nav-link {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .active {
+    background-color: #ddd;
+  }
+  
+  .highlight-line {
+    /* border: 0; Remove default border styles */
+    border-top: 5px solid #000; /* Set a thin top border for highlight */
+    margin: 10px 0; /* Add some margin above and below the line */
+  }
