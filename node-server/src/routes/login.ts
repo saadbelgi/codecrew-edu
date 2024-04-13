@@ -12,7 +12,6 @@ async function LoginController(req: Request, res: Response) {
   const {
     email,
     password,
-    role,
   }: {
     email: string;
     password: string;
@@ -24,13 +23,11 @@ async function LoginController(req: Request, res: Response) {
       res.json({ error: true, message: 'User not registered' });
     } else {
       let correctPassword = await verify(user.password, password);
-      let correctRole = user.role === role;
-      if (correctPassword && correctRole) {
+      if (correctPassword) {
         const payload = {
           id: user._id,
           email: user.email,
           name: user.name,
-          role: role,
         };
         const token = jwt.sign(payload, JWT_SIGNING_SECRET);
         res.cookie('token', token, {
@@ -50,14 +47,13 @@ async function LoginController(req: Request, res: Response) {
           message: 'Logged in successfully',
           // token: token,
         });
-      } else if (!correctPassword) {
-        res.status(401).send({ error: true, message: 'Wrong password' });
       } else {
-        res.status(401).send({ error: true, message: 'Incorrect role' });
+        res.status(401).send({ error: true, message: 'Wrong password' });
       }
     }
   } catch (e) {
-    res.send({ error: true, message: 'Internal server error' });
+    console.log(e);
+    res.status(400).send({ error: true, message: 'Internal server error' });
   }
 }
 
