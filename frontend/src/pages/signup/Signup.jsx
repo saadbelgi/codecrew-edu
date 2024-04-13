@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './Signup.css';
+import Image from '../../images/education.png'
 
-function Signup() {
+const Signup = () => {
   const [formData, setFormData] = useState({
     email: '',
     std: '',
@@ -24,16 +25,17 @@ function Signup() {
   };
 
   return (
+    // <div className="total">
     <div className="signup-container">
       <div className="signup-left">
-        {/* Add your related image or content here */}
+        <img src={Image} alt="Image description" className="signup-left"/>
       </div>
       <div className="signup-right">
         <h2>Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Email:</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required />
+            <input className="spacing" type="email" name="email" value={formData.email} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label>Standard:</label>
@@ -67,6 +69,8 @@ function Signup() {
         </form>
       </div>
     </div>
+    // </div>
+
   );
 }
 
