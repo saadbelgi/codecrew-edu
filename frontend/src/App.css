@@ -40,3 +40,32 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.navbar {
+  display: flex; /* Allow elements to sit side-by-side */
+  width: 75vw; /* Set width to 75% of viewport width */
+  height: 70px; /* Set height to 100% of viewport height */
+  position: fixed; /* Fix the navbar to the top */
+  top: 0; /* Position at the top of the viewport */
+  right: 0; /* Position at the right edge of the viewport */
+  background-color: #f1f1f1; /* Set background color */
+}
+
+.nav-content {
+  padding: 20px 20px;
+}
+
+.nav-link {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #ddd;
+}
+
+
