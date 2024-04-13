@@ -147,14 +147,6 @@ const Home = () => {
               </div>
           </div>
 
-          <div className="navbar">
-            <div className="nav-content">
-              <a className="nav-link" href="#">Dashboard</a>
-              <a className="nav-link" href="#">Learn</a>
-              {/* Add more links here */}
-            </div>
-          </div>
-
         </div>
         
       

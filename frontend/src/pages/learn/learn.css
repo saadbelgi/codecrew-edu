@@ -1,0 +1,53 @@
+.top{
+    display: flex;
+}
+
+.alignment{
+    height: 250px;
+    width: 700px;
+    margin-top: 50px;
+    margin-right: 0px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+
+.container {
+    display: flex; /* Allow multiple dropdowns side-by-side */
+    flex-wrap: wrap; /* Wrap overflow items to next line */
+    margin: 5px; /* Add some margin for spacing */
+    height: 450px;
+    width: 700px;
+    background-color: #fff;
+    border-radius: 10%;
+  }
+  
+  .dropdown-container {
+    /* margin-top: 10px; */
+    width: 700px;
+    background-color: #91d5f5;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Add padding for content */
+    margin: 10px 0; /* Spacing between dropdowns */
+    display: flex; /* Arrange content horizontally */
+    align-items: center; /* Align icon and text vertically */
+    box-shadow: 0 2px 4px #EBC49F(0, 0, 0, 0.1); /* Optional subtle shadow */
+  }
+  
+  .dropdown-content {
+    flex-grow: 1; /* Allow content to fill remaining space */
+  }
+  
+  .fas.fa-file-pdf {
+    margin-right: 10px; /* Spacing between icon and text */
+  }
+
+  .align{
+    display: flex;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 500px;
+  }
+  

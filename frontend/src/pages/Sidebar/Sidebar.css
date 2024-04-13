@@ -1,0 +1,93 @@
+#tooltip {
+    position: absolute; /* Absolute positioning for tooltip */
+    background-color: #f1f1f1; /* Light gray background */
+    border: 1px solid #ddd; /* Border for the tooltip */
+    padding: 5px; /* Add padding for content */
+    display: none; /* Initially hide the tooltip */
+  }
+  
+  #tooltip-text {
+    font-size: 12px; /* Adjust font size for tooltip text */
+  }
+  .main {
+    width: 25vw; /* Set width to 100% of viewport width */
+    height: 100vh; /* Set height to 100% of viewport height */
+  }
+  
+  .profile{
+    height: 100px;
+    width: 120px;
+    border-radius:50px;
+    background-color: azure;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+  }
+  
+  /* .bottom-left{
+    width: 25vw;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0px;
+    
+  }
+  
+  .up{
+    background-color: aliceblue;
+    width: auto;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .box{
+    height: 80px;
+    width: 80px;
+    background-color: beige;
+    padding-left: 10px;
+    
+  } */
+  
+  
+  .bottom-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-top: 200px;
+  }
+  
+  .up {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .down {
+    display: flex;
+    width: 100%;
+  }
+  
+  
+  
+  .box {
+    height: 140px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.208); /* Use rgba for transparency */
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    backdrop-filter: blur(8px); /* Apply blur effect to background */
+    box-shadow: 0 8px 32px 0 rgba(34, 41, 134, 0.37); /* Add box shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .alignment{
+    align-items: center;
+    margin-right: 10px;
+  }
