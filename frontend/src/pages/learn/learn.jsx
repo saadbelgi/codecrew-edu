@@ -9,6 +9,7 @@ import pdfIcon from '../../images/pdf.png'
 
 const Learn = () => {
   const [dropdownData, setDropdownData] = useState([]); // State to store dropdown data
+  const [showText, setShowText] = useState(false);
 
   // Function to generate random dropdown data
   const generateRandomData = () => {
@@ -29,6 +30,9 @@ const Learn = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleText = () => {
+    setShowText(!showText);
+  };
 
   return (
     <>
@@ -40,12 +44,44 @@ const Learn = () => {
         <div>
           <img src={Image} className="alignment" />
           <div className="container">
-            {dropdownData.map((item, index) => (
+            {/* {dropdownData.map((item, index) => (
               <div key={index} className="dropdown-container">
-                <Dropdown content={item.label} icon={<img src={testIcon} alt="Test Icon" />}/>
+                <Dropdown content={item.label} />
                 <img src={pdfIcon} className='align'/>
               </div>
-            ))}
+            ))} */}
+            <div key='1' className="dropdown-container" onClick={toggleText}>
+                {/* <Dropdown content='Chapter 1'/> */}
+                <p className="style">Chapter 1</p>
+                <img src={pdfIcon} className='align'/>
+                {showText && (
+  <>
+    <h2>hiiii</h2>
+    <p>This is some additional information that appears when you click Chapter 1.</p>
+    {/* You can add more content elements here (lists, images, etc.) */}
+  </>
+)}
+              </div>
+              <div key='1' className="dropdown-container">
+                {/* <Dropdown content='Chapter 1'/> */}
+                <p className="style">Chapter 1</p>
+                <img src={pdfIcon} className='align'/>
+              </div>
+              <div key='1' className="dropdown-container">
+                {/* <Dropdown content='Chapter 1'/> */}
+                <p className="style">Chapter 1</p>
+                <img src={pdfIcon} className='align'/>
+              </div>
+              <div key='1' className="dropdown-container">
+                {/* <Dropdown content='Chapter 1'/> */}
+                <p className="style">Chapter 1</p>
+                <img src={pdfIcon} className='align'/>
+              </div>
+            <div key='1' className="dropdown-container">
+                {/* <Dropdown content='Chapter 1'/> */}
+                <p className="style">Chapter 1</p>
+                <img src={pdfIcon} className='align'/>
+              </div>
           </div>
         </div>
       </div>
