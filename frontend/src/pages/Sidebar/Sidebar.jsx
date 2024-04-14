@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './Sidebar.css'
+import UserIcon from "../../images/user.png";
 
 const Sidebar = () => {
   return (
     <>
-        <div id="tooltip" class="hidden">
-  <span id="tooltip-text"></span>
-</div>
+          <div id="tooltip" class="hidden">
+    <span id="tooltip-text"></span>
+      </div>
 
 
 
@@ -22,10 +23,10 @@ const Sidebar = () => {
           <div className="left-side">
               
               <div className='profile'>
-                
-                  
+              
+              <img src={UserIcon}></img> 
               </div>
-              <p style={{ color: 'white' }}>Username</p>
+              <p style={{ color: 'white',fontSize:'28px' }}>Advait Sapkal</p>
 
               <div className='bottom-left'>
 

@@ -14,48 +14,14 @@
     height: 100vh; /* Set height to 100% of viewport height */
   }
   
-  .profile{
-    height: 100px;
-    width: 120px;
-    border-radius:50px;
-    background-color: azure;
-    margin-left: 150px;
-    margin-top: 50px;
-    padding-bottom: 20px;
-  }
-  
-  /* .bottom-left{
-    width: 25vw;
-    height: 250px;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 0px;
-    
-  }
-  
-  .up{
-    background-color: aliceblue;
-    width: auto;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .box{
-    height: 80px;
-    width: 80px;
-    background-color: beige;
-    padding-left: 10px;
-    
-  } */
-  
+
   
   .bottom-left {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
-    margin-top: 200px;
+    margin-top: 150px;
   }
   
   .up {
@@ -70,11 +36,9 @@
     width: 100%;
   }
   
-  
-  
   .box {
     height: 140px;
-    width: 200px;
+    width: 220px;
     background-color: rgba(255, 255, 255, 0.208); /* Use rgba for transparency */
     border-radius: 8px;
     padding: 5px;
@@ -85,9 +49,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease; /* Smooth transition */
+    border: 1px solid white;
+  }
+  
+  .box:hover {
+    transform: scale(1.05); /* Scale up on hover */
   }
   
   .alignment{
     align-items: center;
     margin-right: 10px;
   }
+
+  .profile {
+    height: 100px;
+    width: 100px; /* Adjust width to match height for a perfect circle */
+    border-radius: 50%; /* Make the div circular */
+    margin-left: 150px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+     /* Center the content vertically */
+
+  }
+  
+  .profile img {
+    max-width: 100%; /* Ensure the image fits within the circular boundary */
+    max-height: 100%; /* Ensure the image fits within the circular boundary */
+  }
+  

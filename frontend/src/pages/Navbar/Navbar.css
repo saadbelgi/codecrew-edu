@@ -5,7 +5,7 @@
     position: fixed; /* Fix the navbar to the top */
     top: 0; /* Position at the top of the viewport */
     right: 0; /* Position at the right edge of the viewport */
-    background-color: #f1f1f1; /* Set background color */
+    background-color: rgb(1, 1, 34); /* Set background color */
     border-bottom: 1px solid #000;
   }
   
@@ -17,7 +17,7 @@
   }
   
   .nav-link {
-    color: black;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
