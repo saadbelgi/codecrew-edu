@@ -33,3 +33,9 @@
     border-top: 5px solid #000; /* Set a thin top border for highlight */
     margin: 10px 0; /* Add some margin above and below the line */
   }
+  .navbar-text{
+    padding-left:8px;
+    padding-right:8px;
+    margin-left: auto;
+    margin-right:16px
+  }
