@@ -7,7 +7,7 @@ type Student = {
   medium: string;
 };
 
-const UserSchema = new Schema<Student>({
+const StudentSchema = new Schema<Student>({
   user: { type: Schema.Types.ObjectId, ref: 'User' },
   board: {
     type: String,
@@ -31,5 +31,5 @@ const UserSchema = new Schema<Student>({
   },
 });
 
-const Student = model<Student>('Student', UserSchema);
+const Student = model<Student>('Student', StudentSchema, 'students');
 export default Student;

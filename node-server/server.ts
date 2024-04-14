@@ -1,11 +1,13 @@
-import express from 'express';
 import dotenv from 'dotenv';
+dotenv.config();
+
+import express from 'express';
 import morgran from 'morgan';
 import cors, { CorsOptions } from 'cors';
 import mongoose from 'mongoose';
 import router from './src/routes/index';
 
-dotenv.config();
+
 const app = express();
 
 async function connect() {
