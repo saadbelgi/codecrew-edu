@@ -4,18 +4,18 @@ import Textbook from '../models/Textbook';
 
 const router = Router();
 
-router.post('/videos', async (req, res, next) => {
+router.get('/videos', async (req, res, next) => {
   const videos = await Video.find({ grade: 10 })
     .sort({ chapterNo: 'asc', subtopicNo: 'asc' })
     .exec();
   res.json(videos);
 });
 
-router.post('/textbooks', async (req, res, next) => {
-  const videos = await Textbook.find({ grade: 10 })
+router.get('/textbooks', async (req, res, next) => {
+  const books = await Textbook.find({ grade: 10 })
     .sort({ chapterNo: 'asc' })
     .exec();
-  res.json(videos);
+  res.json(books);
 });
 
 export default router;

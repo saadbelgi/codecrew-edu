@@ -35,7 +35,6 @@ async function LoginController(req: Request, res: Response) {
           secure: true,
           maxAge: 31536000000, // 365 days
           sameSite: 'none',
-          signed: true,
         });
         res.cookie('user', payload, {
           httpOnly: false,
